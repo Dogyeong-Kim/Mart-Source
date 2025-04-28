@@ -43,8 +43,4 @@ public class Item {
     @Builder.Default
     @OneToMany(mappedBy = "item")
     private List<OrderItem> orderItems = new ArrayList<>();
-
-    @JoinColumn(name = "CATEGORY_ITEM_ID")
-    @ManyToOne(fetch = FetchType.LAZY)
-    private CategoryItem categoryItem;
 }
